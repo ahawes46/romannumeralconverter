@@ -1,0 +1,80 @@
+function convertToRoman(num) {
+  var myRoman="";
+
+   while(num>0){
+
+     while(num>=1000){
+
+     if(num>=1000){
+       myRoman+="M";
+       num-=1000;
+     }
+
+   }
+
+     if(num>=900 && num<1000){
+       myRoman+="CM";
+       num-=900;
+     }
+
+     if(num>=500 && num<900){
+       myRoman+="D";
+       num-=500;
+     }
+
+     if(num>=400 && num<500){
+       myRoman+="CD";
+       num-=400;
+     }
+
+     if(num>=100 && num<400){
+       myRoman+="C";
+       num-=100;
+     }
+
+     if(num>=90 && num<100){
+       myRoman+="XC";
+       num-=90;
+     }
+
+     if(num>=50 && num<90){
+       myRoman+="L";
+       num-=50;
+     }
+
+     if(num>=40 && num<50){
+       myRoman+="XL";
+       num-=40;
+     }
+
+     if(num>=10 && num<40){
+       myRoman+="X";
+       num-=10;
+     }
+
+     if(num==9){
+       myRoman+="IX";
+       num-=9;
+     }
+
+     if(num>=5 && num<9){
+       myRoman+="V";
+       num-=5;
+     }
+
+     if(num==4){
+       myRoman+="IV";
+       num-=4;
+     }
+
+     if(num>=1 && num<4){
+       myRoman+="I";
+       num-=1;
+     }
+
+   
+   }
+ return myRoman;
+}
+
+convertToRoman(36);
